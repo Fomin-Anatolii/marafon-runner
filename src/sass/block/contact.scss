@@ -1,0 +1,20 @@
+.contact {
+  max-width: 250px;
+  margin-top: 55px;
+
+  &__number {
+    @include reset-link;
+    @include font(16px, 20px);
+    @include font-cabinet-bold;
+    text-decoration-line: underline;
+    color: $color-orange;
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__text {
+    @include reset-model;
+    @include font(12px, 18px);
+    @include font-helvetica-regular;
+    color: $color-text-base;
+  }
+}

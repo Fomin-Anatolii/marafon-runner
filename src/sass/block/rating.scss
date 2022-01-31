@@ -1,0 +1,57 @@
+.rating {
+  background-color: $color-bg-promo;
+  &__title {
+    @include reset-model;
+    @include font-cabinet-bold;
+    @include font(20px, 22px);
+    letter-spacing: 0.02em;
+    color: $color-text-dark;
+    margin-bottom: 7px;
+  }
+
+  &__grade {
+    &::before {
+      display: inline-block;
+      content: url(../../img/star.svg);
+      width: 16px;
+      height: 16px;
+      margin: 0 5px;
+    }
+  }
+
+  &__text {
+    @include reset-model;
+    font-family: $font-family-base;
+    letter-spacing: 0.02em;
+    @include font(16px, 24px);
+    color: $color-text-base;
+    margin-bottom: 20px;
+  }
+
+  &-list {
+    @include reset-list;
+    display: flex;
+
+    &__item ~ &__item {
+      margin-left: -10px;
+    }
+
+    &__object {
+      width: 48px;
+      height: 48px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+
+      &_more {
+        @include reset-button;
+        @include font(16px, 16px);
+        @include font-cabinet-bold;
+        padding: 16px 0;
+        background-color: $color-orange;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #fff;
+      }
+    }
+  }
+}

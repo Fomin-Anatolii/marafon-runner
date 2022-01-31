@@ -1,0 +1,34 @@
+.promo {
+  padding-top: 138px;
+  padding-bottom: 175px;
+  background-color: $color-bg-promo;
+  background-image: url(../../img/bg.png), url(../../img/bg-2.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 138px right 0, left 26px top 16px;
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    @include reset-model;
+    @include font-cabinet-black;
+    @include font(62px, 77px);
+    color: $color-text-dark;
+    max-width: 540px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include font-helvetica-regular;
+    @include font(18px, 30px);
+    margin-bottom: 34px;
+    max-width: 452px;
+    color: $color-text-base;
+  }
+
+  &__btn {
+    margin-bottom: 100px;
+    padding: 20px 40px;
+  }
+}
